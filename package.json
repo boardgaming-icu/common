@@ -1,10 +1,10 @@
 {
   "name": "common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Common library for boardgaming.icu",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "prepare": "tsc"
   },
   "keywords": [
     "boardgaming.icu"
