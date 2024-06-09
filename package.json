@@ -1,5 +1,5 @@
 {
-  "name": "common",
+  "name": "@boardgaming-icu/common",
   "version": "1.0.1",
   "description": "Common library for boardgaming.icu",
   "main": "dist/index.js",
