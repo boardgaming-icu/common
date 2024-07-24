@@ -12,6 +12,11 @@ export type KafkaLoggers = {
     error?: Function
 }
 
+export type KafkaMsg = {
+    topic: string,
+    message: Object
+}
+
 export default class KafkaHandler extends EventEmitter {
     private _kafka: Kafka
     private _producer: Producer
@@ -35,6 +40,15 @@ export default class KafkaHandler extends EventEmitter {
         this._setupConsumer()
         this._producer = this._kafka.producer({ allowAutoTopicCreation: true })
         this._setupProducer()
+    }
+
+    async send(msg: KafkaMsg) {
+        this._producer.send({
+            topic: msg.topic,
+            messages: [
+                {value: JSON.stringify(msg.message)}
+            ]
+        })
     }
 
     async _prehandleKafkaMessage(kafkaPayload: EachMessagePayload) {
