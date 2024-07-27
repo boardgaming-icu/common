@@ -1,5 +1,5 @@
-import KafkaHandler from "./communicationHandler";
-import Logger, { severities, Severities } from "./logger";
+import KafkaHandler from "./communicationHandler.js";
+import Logger, { severities, Severities } from "./logger.js";
 
 export default {
     KafkaHandler,

@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Common library for boardgaming.icu",
   "main": "dist/index.js",
+  "type": "module",
   "scripts": {
     "prepare": "tsc"
   },
