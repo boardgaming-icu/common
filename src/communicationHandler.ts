@@ -40,6 +40,8 @@ export default class KafkaHandler extends EventEmitter {
         this._setupConsumer()
         this._producer = this._kafka.producer({ allowAutoTopicCreation: true })
         this._setupProducer()
+
+        return this
     }
 
     async send(msg: KafkaMsg) {
